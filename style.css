@@ -46,7 +46,6 @@ body{
     font-size: var(--FontSize);
     display: grid;
     grid-template-columns: 575px minmax(300px,575px) ;
-    background-image: url(./images/image-header-desktop.jpg);
     background-position: right;
     background-repeat: no-repeat;
      height: var(--height);
@@ -101,10 +100,12 @@ color: var(--Softviolet);
 }
 
 /*wrapper_banner*/
-
-.wrapper_banner{
-    background-color: rgba(102, 31, 146, 0.7);
-    
+img{
+mix-blend-mode: multiply;
+opacity: 80%;
+}
+picture{
+    background-color: var(--Softviolet);
 }
 @media screen and (max-width:1120px) {
     
@@ -128,9 +129,10 @@ color: var(--Softviolet);
         --height:420px ;
     
     }
+
     .wrapper{
         grid-template-columns: 375px minmax(300px,575px) ;
-   
+
     }
     .wrapper_contents{
         margin-left: 50px;
@@ -157,14 +159,16 @@ color: var(--Softviolet);
     .wrapper{
         
         grid-template-columns: 325px ;
-        background-image: url(./images/image-header-mobile.jpg);
-        background-size: 100%;
         background-position: top;
         text-align: center;
     }
-    .wrapper_banner{
+img, picture{
+    height: 242px;
+}
+
+    picture{
         grid-row: 1/2;
-        height: 240px;
+    
     }
     .title_contents{
         font-size: 1.8rem;
